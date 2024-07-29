@@ -56,89 +56,87 @@ export default function Signup() {
     };
 
     return (
-        <>
-            <section className="signup">
-                <div className="signupdetails">
-                    <div className="formDetails">
-                        <h1>Sign up</h1>
-                        <form onSubmit={handleSubmit}>
-                            <div className="input_field">
-                                <input
-                                    type="text"
-                                    name="firstname"
-                                    value={formData.firstname}
-                                    onChange={handleChange}
-                                    required
-                                    spellCheck="false"
-                                />
-                                <label htmlFor="firstname">First Name</label>
+        <section className="signup">
+            <div className="signupdetails">
+                <div className="formDetails">
+                    <h1>Sign up</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className="input_field">
+                            <input
+                                type="text"
+                                name="firstname"
+                                value={formData.firstname}
+                                onChange={handleChange}
+                                required
+                                spellCheck="false"
+                            />
+                            <label htmlFor="firstname">First Name</label>
+                        </div>
+                        <div className="input_field">
+                            <input
+                                type="text"
+                                name="lastname"
+                                value={formData.lastname}
+                                onChange={handleChange}
+                                required
+                                spellCheck="false"
+                            />
+                            <label htmlFor="lastname">Last Name</label>
+                        </div>
+                        <div className="input_field">
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                spellCheck="false"
+                            />
+                            <label htmlFor="email">Enter Email</label>
+                        </div>
+                        <div className="input_field">
+                            <input
+                                type="text"
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleChange}
+                                required
+                                spellCheck="false"
+                            />
+                            <label htmlFor="phoneNumber">Phone Number</label>
+                        </div>
+                        <div className="input_field">
+                            <input
+                                type="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                required
+                                spellCheck="false"
+                            />
+                            <label htmlFor="password">Enter Password</label>
+                        </div>
+                        <div className="input_field">
+                            <input
+                                type="password"
+                                name="c_password"
+                                value={formData.c_password}
+                                onChange={handleChange}
+                                required
+                                spellCheck="false"
+                            />
+                            <label htmlFor="c_password">Confirm Password</label>
+                        </div>
+                        <div className="input_field">
+                            <button type="submit">Sign Up</button>
+                            <div className="signupOthLinks">
+                                <span>Already a member?<NavLink to="#">Login</NavLink></span>&nbsp;&nbsp;
+                                <span><NavLink to="/">Go to Homepage</NavLink></span>
                             </div>
-                            <div className="input_field">
-                                <input
-                                    type="text"
-                                    name="lastname"
-                                    value={formData.lastname}
-                                    onChange={handleChange}
-                                    required
-                                    spellCheck="false"
-                                />
-                                <label htmlFor="lastname">Last Name</label>
-                            </div>
-                            <div className="input_field">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    spellCheck="false"
-                                />
-                                <label htmlFor="email">Enter Email</label>
-                            </div>
-                            <div className="input_field">
-                                <input
-                                    type="text"
-                                    name="phoneNumber"
-                                    value={formData.phoneNumber}
-                                    onChange={handleChange}
-                                    required
-                                    spellCheck="false"
-                                />
-                                <label htmlFor="phoneNumber">Phone Number</label>
-                            </div>
-                            <div className="input_field">
-                                <input
-                                    type="password"
-                                    name="password"
-                                    value={formData.password}
-                                    onChange={handleChange}
-                                    required
-                                    spellCheck="false"
-                                />
-                                <label htmlFor="password">Enter Password</label>
-                            </div>
-                            <div className="input_field">
-                                <input
-                                    type="password"
-                                    name="c_password"
-                                    value={formData.c_password}
-                                    onChange={handleChange}
-                                    required
-                                    spellCheck="false"
-                                />
-                                <label htmlFor="c_password">Confirm Password</label>
-                            </div>
-                            <div className="input_field">
-                                <button type="submit">Sign Up</button>
-                                <div className="signupOthLinks">
-                                    <span>Already a member?<NavLink to="#">Login</NavLink></span>&nbsp;&nbsp;
-                                    <span><NavLink to="/">Go to Homepage</NavLink></span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 }
