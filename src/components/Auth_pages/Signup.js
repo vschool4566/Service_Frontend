@@ -26,7 +26,7 @@ export default function Signup() {
         }
 
         try {
-            const response = await fetch("http://localhost:8000/signup", {
+            const response = await fetch("https://service-backend-1.onrender.com/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
