@@ -1,11 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Signup(){
-    return(
+export default function Signup() {
+    return (
         <>
             <section className="signup">
                 <div className="signupdetails">
                     <div className="formDetails">
+                        <h1>Sign up</h1>
                         <form action="#">
                             <div className="input_field">
                                 <input type="text" name="Firstname" required spellCheck="false" />
@@ -33,6 +35,10 @@ export default function Signup(){
                             </div>
                             <div className="input_field">
                                 <button>Sign up</button>
+                                <div className="signupOthLinks">
+                                    <span>Already a member?<NavLink to="#">Login</NavLink></span>&nbsp;&nbsp;
+                                    <span><NavLink to="/">Go to Homepage</NavLink></span>
+                                </div>
                             </div>
                         </form>
                     </div>
