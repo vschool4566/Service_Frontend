@@ -1,39 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import '../assets/css/main.css'
 import Section1Img from '../assets/images/section1img.png'
+import { HiBars3BottomLeft } from "react-icons/hi2";
+import { NavLink,useNavigate } from "react-router-dom";
 
 export default function Homepage() {
+    //navbar
+    const [openNav,setOpenNav]=useState(false)
+    const navigate=useNavigate()
     return (
         <>
             <section className="firstSection">
-                <div className="navBar_section">
-                    <div className="logoName">
-                        <h5>Service Harbor</h5>
-                    </div>
+               <div className="mainNav">
                     <nav>
-                        <ul>
-                            <li>Home</li>
-                            <li>About us</li>
-                            <li>Service</li>
-                            <li>Contact us</li>
-                            <li>Career</li>
+                        <div className="homeLogo">
+                            <h1>Service Harbour</h1>
+                        </div>
+                        <ul className={openNav ? "active":""}>
+                            <li><NavLink to="#">Home</NavLink></li>
+                            <li><NavLink to="#">About us</NavLink></li>
+                            <li><NavLink to="#">Services</NavLink></li>
+                            <li><NavLink to="#">Career</NavLink></li>
                         </ul>
+                        <div className="navBar" onClick={()=>{
+                            setOpenNav(!openNav)
+                        }}>
+                            <HiBars3BottomLeft/>
+                        </div>
                     </nav>
-                    <div className="buttons">
-                        <button className="HomeButtons">Login</button>
-                    </div>
-                </div>
-                <div className="section1Content">
+               </div>
+                <div className="mainContent">
                     <div className="content">
                         <h1>Service Harbour</h1>
-                        <p>The Service project connects users with service providers for tasks like cleaning and gardening, allowing bookings, online payments, and reviews. Workers subscribe, manage services, and receive payments, with the platform earning from subscriptions and service fees.
-                        </p>
-                        <button className="HomeButtons">Signup</button>
+                        <p>Our business connects users with service providers for tasks such as cleaning, gardening, and home repairs. Users can book services, view provider profiles, and manage appointments online, while providers can offer their services and receive bookings through the platform.</p>
+                        <button className="HomeButtons" onClick={()=>navigate('/signup')}>Join now</button>
                     </div>
-                    <div className="images">
+                    <div className="mainImage">
                         <img src={Section1Img} alt="" />
                     </div>
-                </div>
+                </div>            
             </section>
             <section className="secondSection">
                 <h1>Second Section</h1>
